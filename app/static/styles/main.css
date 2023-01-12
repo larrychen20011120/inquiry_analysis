@@ -1,0 +1,20 @@
+.main-color {
+    background-color: #248888;
+}
+.blank-color {
+    background-color: #E6E6E6;
+}
+.logout {
+    border-style: hidden;
+    border-radius: 6px;
+}
+.logout:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}
+#error-buffer {
+    display: none;
+}
+#user-name {
+    margin: 10px;
+}

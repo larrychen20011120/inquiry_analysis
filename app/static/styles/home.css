@@ -1,0 +1,21 @@
+#record-container {
+    width: 500px;
+    margin-top: 15px;
+}
+.record-card {
+    margin: 10px;
+}
+a:link { text-decoration: none; }
+a:visited { text-decoration: none; }
+a:hover { text-decoration: none; }
+a:active { text-decoration: none; }
+.mybtn {
+    border-style: hidden;
+    margin-top: 16px;
+    padding: 5px 16px;
+    border-radius: 6px;
+}
+.mybtn:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}

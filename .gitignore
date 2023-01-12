@@ -1,0 +1,6 @@
+/app/uploads/*.txt
+/app/results/*.txt
+/app.db
+/temp.png
+/dest_audio.wav
+/change.wav

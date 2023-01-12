@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+{% block name %} {{ current_user.name }} {% endblock name %}
+{% block content %}
+<div class="container d-flex flex-row justify-content-center" style="margin-top: 50px;">
+    <div class="card-body d-flex flex-row justify-content-center">
+        <form id="upload-form" method="POST" enctype="multipart/form-data" action="{{ url_for('upload') }}">
+            {{ uploadForm.hidden_tag() }}
+            <div class="mb-3">
+                <label class="form-label">
+                    即時稿標題
+                </label>
+                {{ uploadForm.title(class="form-control fill-in") }}
+                <div class="invalid-feedback"></div>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">病患名稱(可選)</label>
+                {{ uploadForm.patient_name(class="form-control fill-in") }}
+            </div>
+            <div class="mb-3">
+                <label class="form-label">上傳音檔</label>
+                {{ uploadForm.uploadFile }}
+            </div>
+            <div class="mb-3">
+                <label class="form-label">日期</label>
+                {{ uploadForm.date(class="form-control fill-in") }}
+            </div>
+            <div class="mb-3">
+                語言
+                {{ uploadForm.radio }}
+            </div>
+            <div class="d-grid gap-2">
+                {{ uploadForm.submit(class="main-color text-white mysubmit  fill-in") }}
+            </div>
+        </form>
+    </div>
+</div>
+
+
+<ul id="error-buffer">
+    {% for field in errors %}
+    {% for message in field.messages %}
+    <li class="error-msg">{{ message }}</li>
+    {% endfor %}
+    {% endfor %}
+</ul>
+<script type="module">
+    import {errorAlert} from "{{ url_for('static', filename='interacts/error_alert.js') }}"
+    window.onload = function() {
+        errorAlert();
+        let chinese = document.getElementById('radio-0');
+        chinese.checked = true;
+    }
+</script>
+{% endblock content %}

@@ -1,0 +1,22 @@
+.mysubmit {
+    border-style: hidden;
+    margin-top: 16px;
+    padding: 5px 16px;
+    border-radius: 6px;
+}
+.mysubmit:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}
+.web-name {
+    margin-bottom: 16px;
+}
+#to-register-btn {
+    margin-left: 5px;
+}
+#to-login-btn {
+    margin-left: 5px;
+}
+.fill-in {
+    width: 300px;
+}

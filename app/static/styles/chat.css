@@ -1,0 +1,119 @@
+$scroll:10px;
+::-webkit-scrollbar{width:$scroll;}
+::-webkit-scrollbar-thumb{border-radius:$scroll;background-color:rgba(255,255,255,0.2);}
+::-webkit-scrollbar-track{border-radius:$scroll;background-color:rgba(255,255,255,0.1);}
+
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
+ul, li {
+    list-style-type: none;
+}
+
+.wrapper {
+    margin-top: 80px;
+    margin-bottom: 50px;
+}
+
+.wrapper ul {
+    width: 50%;
+    margin: 0 auto;
+    height: 300px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    padding-right: 30px;
+}
+
+.wrapper ul li {
+    margin-bottom: 20px;
+    padding: 10px 20px;
+    position: relative;
+    border-radius: 10px;
+    font: 1em/1.6 "arial";
+    clear: both;
+}
+
+.wrapper .doctor {
+    float: left;
+    margin-left: 80px;
+}
+
+.wrapper .patient {
+    float: right;
+    margin-right: 80px;
+    color: rgba(255, 255, 255, 0.9);
+    //text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.75);
+    //background-color: rgba(255, 255, 255, 0.3);
+}
+
+.wrapper ul li:before, .wrapper ul li:after {
+    position: absolute;
+    content: "";
+}
+
+.wrapper ul li:before {
+    width: 45px;
+    height: 45px;
+    top: 0;
+    border-radius: 50%;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+}
+
+.wrapper .doctor:before {
+    left: -80px;
+    background-image: url("https://cdn-icons-png.flaticon.com/512/822/822118.png");
+    background-size: 45px 45px;
+}
+
+.wrapper .patient:before {
+    right: -80px;
+    background-image: url("https://cdn-icons-png.flaticon.com/512/7374/7374125.png");
+    background-size: 45px 45px;
+}
+
+.wrapper ul li:after {
+    width: 0;
+    height: 0;
+    top: 15px;
+    border-top: 15px solid #248888;
+}
+
+.wrapper .doctor:after {
+    left: -15px;
+    border-left: 15px solid transparent;
+    border-top-color: #248888;
+}
+
+.wrapper .patient:after {
+    right: -15px;
+    border-top-color: #E6E6E6;
+    border-right: 15px solid transparent;
+}
+audio {
+    margin-top: 50px;
+    width: 70%;
+}
+.mysubmit {
+    border-style: hidden;
+    margin-top: 16px;
+    padding: 5px 16px;
+    border-radius: 6px;
+}
+.mysubmit:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}
+@media only screen and (min-width:768px) {
+    .wrapper ul {
+        width: 70%;
+    }
+}
+
+@media only screen and (max-width:767px) {
+    .wrapper ul {
+        width: 90%;
+        height: 260px;
+    }
+}

@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% block name %} {{ current_user.name }} {% endblock name %}
+{% block headimport %}
+<meta name="referrer" content="no-referrer">
+<link href={{ url_for('static', filename='styles/chat.css') }} rel="stylesheet">
+<link href={{ url_for('static', filename='styles/analysis.css') }} rel="stylesheet">
+<script type="text/javascript" src={{ url_for('static', filename='interacts/analysis.js') }}></script>
+{% endblock headimport %}
+{% block content %}
+<div class="d-flex flex-row justify-content-center container" >
+    <div class="show-content d-flex flex-column justify-content-center">
+        <div class="container btn-container" style="display: inline-block; margin-top: 30px;">
+            <div class="blank-color btn" id="origin-btn">原始資料</div>
+            <div class="main-color btn" id="visual-btn">視覺化分析</div>
+            <div class="main-color btn" id="report-btn">病歷</div>
+        </div>
+        <div class="container" id="origin-page">
+            <div class="d-flex flex-row justify-content-center container" >
+                <audio controls autoplay>
+                </audio>
+            </div>
+            <div class="d-flex flex-row justify-content-center container" >
+                <div class="wrapper d-flex flex-row justify-content-center">
+                </div>
+            </div>
+        </div>
+        <div class="container" id="visual-page">
+            <div class="d-flex flex-row justify-content-center container" >
+                <div class="d-flex flex-row justify-content-center" id='visual-content'>
+                </div>
+            </div>
+        </div>
+        <div class="container" id="report-page">
+            <div class="d-flex flex-row justify-content-center container" >
+                <div class="d-flex flex-row justify-content-center" id='report-content'>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+<div id='secret' style="display: none;">
+    {{ id }}
+</div>
+{% endblock content%}
