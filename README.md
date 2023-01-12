@@ -35,5 +35,5 @@ python server.py
 ```
 5. 在 browser 打上 `127.0.0.1:5000` 即可連上使用
 ## 註解
-`*.dll` 與 `*.exe` 是 server.py 在 windows 下必須下載的文件 (用於處理相關音檔)
+`*.dll` 與 `*.exe` 是 server.py 在 windows 下必須下載的文件 (用於處理相關音檔) <br>
 Reference: https://github.com/BtbN/FFmpeg-Builds/releases
