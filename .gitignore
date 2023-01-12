@@ -1,4 +1,4 @@
-/app/uploads/*.txt
+/app/uploads/*.wav
 /app/results/*.txt
 /app.db
 /temp.png
